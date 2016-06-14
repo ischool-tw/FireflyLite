@@ -1,0 +1,4 @@
+include ':app', ':FireflyLite'
+
+project(':FireflyLite').projectDir = new File(settingsDir, 'FireflyLite');
+

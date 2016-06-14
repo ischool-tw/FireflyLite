@@ -1,0 +1,113 @@
+<resources>
+    <string name="app_name">Firefly</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="empty">/</string>
+
+    <string name="add_child">加入小孩</string>
+    <string name="add_school">加入學校</string>
+
+    <!-- add child activity -->
+    <string name="chooseOneMethod">請選擇以下其中一種方式加入孩子：</string>
+    <string name="add_child_with_code">請參考學校發放的「家長行動應用邀請函」，選擇〝掃描QR Code〞或〝輸入家長代碼〞來加入您的孩子！</string>
+    <string name="add_child_with_code_confirm">掃瞄 QRCode</string>
+    <string name="add_child_without_code">或直接手動輸入資料，快速加入！</string>
+    <string name="add_child_without_code_confirm">輸入家長代碼</string>
+    <string name="add_child_input_info_confirm">輸入孩子資料</string>
+    <string name="add_child_error_sync_children">同步學生資料時發生錯誤</string>
+    <string name="add_child_sync_children">同步學生資料中&#8230;</string>
+    <string name="add_child_save_accessable">儲存個人關聯學校中&#8230;</string>
+    <string name="add_child_error_save_accessable">儲存個人關聯學校時發生錯誤</string>
+    <string name="add_child_add_parent_completed">加入家長完成</string>
+    <string name="add_child_add_parent">加入家長中&#8230;</string>
+    <string name="add_child_connect_accessable">連結學校中&#8230;</string>
+    <string name="add_child_error_connect_accessable">連結學校時發生錯誤</string>
+    <string name="add_child_error_invalid_qrcode">不合法的 QRCode</string>
+    <string name="add_child_default_relation">家長</string>
+    <string name="add_child_error_sync_accessable">同步連結學校時發生錯誤</string>
+    <string name="add_child_sync_accessable">同步連結學校中&#8230;</string>
+    <string name="add_child_error_null_result">無掃瞄結果</string>
+    <string name="add_child_add_parent_error">加入小孩時發生錯誤</string>
+    <string name="add_child_zxing">您尚未安裝建議使用的 QR Code 掃描 App，可能會導致無法掃描成功。\n是否前往安裝？</string>
+    <string name="add_child_positive">前往安裝</string>
+    <string name="add_child_negative">不了，謝謝</string>
+    <string name="add_child_title">提示</string>
+    <string name="add_child_error_duplicate">小孩已經加入過囉~</string>
+    <string name="add_child_show_parents">家長帳號清單</string>
+    <string name="add_child_show_parents_information">查詢哪些帳號正在追蹤我的孩子?</string>
+    <string name="add_child_show_parents_but_no_child">請先加入孩子，即可查詢家長帳號清單</string>
+
+
+    <!-- parent code activity -->
+    <string name="code_hint_input_school">請輸入學校</string>
+    <string name="code_hint_input_code">請輸入家長代碼</string>
+    <string name="code_hint_input_relation">與小孩的關係 (如:父子/母女)</string>
+    <string name="code_button_ok">送出</string>
+    <string name="code_info_message">如何取得家長代碼?\n請詢問孩子或聯絡導師</string>
+    <string name="title_activity_add_child">加入小孩</string>
+    <string name="title_activity_billing">BillingActivity</string>
+    <string name="code_parentcode_can_not_be_empty">「家長代碼」不可空白！</string>
+    <string name="code_relationship_can_not_be_empty">「與小孩的關係」不可空白！</string>
+
+    <!-- Purchase Activity -->
+    <string name="title_activity_purchase">加值服務</string>
+    <string name="purchase_tab_info">狀況</string>
+    <string name="purchase_tab_point">購買點數</string>
+    <string name="purchase_tab_buy">商城</string>
+    <string name="purchase_tab_history">消費紀錄</string>
+
+
+    <!-- limit -->
+    <string name="limit_positive">我瞭解了</string>
+    <string name="limit_title">提醒</string>
+    <string name="limit_expired">此 App 已經過期！\n此功能請更新版本後再行使用。</string>
+    <string name="title_activity_input_info">InputInfoActivity</string>
+
+    <!-- input info -->
+    <string name="input_info_student_number">請輸入小孩學號</string>
+    <string name="input_info_sn">請輸入小孩身分證號</string>
+    <string name="input_info_title">請輸入學生資訊</string>
+    <string name="input_info_activity_title">加入小孩</string>
+    <string name="input_info_found_title">找到了</string>
+    <string name="input_info_found_message">我們找到了學生「 %s 」，請問此學生是否為您的小孩？</string>
+    <string name="input_info_found_positive">是的，請加入</string>
+    <string name="input_info_found_negative">不要加入</string>
+    <string name="input_info_relationship_can_not_be_empty">「身分證號」不可空白！</string>
+    <string name="input_info_ssn_can_not_be_empty">「與小孩的關係」不可空白！</string>
+    <string name="input_info_student_number_can_not_be_empty">「學號」不可空白！</string>
+
+    <!-- support email -->
+    <string name="support_mail_to">support@ischool.com.tw</string>
+    <string name="support_default_title">關於 1Campus 家長 App 的建議</string>
+
+    <string name="baby_delete_confirm">確定移除此小孩？</string>
+    <string name="baby_delete_positive">刪除</string>
+    <string name="baby_delete_fail">移除小孩失敗！</string>
+    <string name="baby_delete_fail_user_unknow">移除小孩失敗:帳號錯誤</string>
+    <string name="baby_delete_succeed">移除小孩成功！</string>
+
+    <string name="school_delete_confirm">確定移除此學校？</string>
+    <string name="school_delete_positive">刪除</string>
+    <string name="school_delete_fail">移除學校失敗！</string>
+    <string name="school_delete_fail_user_unknow">移除學校失敗:帳號錯誤</string>
+    <string name="school_delete_succeed">移除學校成功！</string>
+
+    <!-- 載入資料畫面 -->
+    <string name="loading">資料載入中。。。。</string>
+
+    <!-- 登出 -->
+    <string name="logout">登出</string>
+    <string name="logout_mail">Email</string>
+    <string name="logout_title">離開</string>
+
+    <string name="logout_message">您確定要登出?</string>
+    <string name="logout_yes">是</string>
+    <string name="logout_no">否</string>
+    <string name="title_activity_show_parent">ShowParentActivity</string>
+
+
+    <string name="menu_baby_reload">重新載入</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

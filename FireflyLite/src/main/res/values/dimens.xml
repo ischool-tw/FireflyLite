@@ -1,0 +1,46 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <!--<dimen name="nav_header_height">160dp</dimen>-->
+    <dimen name="nav_header_height">140dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="function_item_padding">8dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!--<dimen name="activity_horizontal_margin">16dp</dimen>-->
+    <!--<dimen name="activity_vertical_margin">16dp</dimen>-->
+    <dimen name="toolbar_elevation">4dp</dimen>
+    <dimen name="drawer_elevation">2dp</dimen>
+    <dimen name="drawer_width">300dp</dimen>
+    <dimen name="touch_raise">10dp</dimen>
+    <!-- Define standard dimensions to comply with Holo-style grids and rhythm. -->
+
+    <dimen name="margin_tiny">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+    <dimen name="margin_huge">64dp</dimen>
+
+    <!-- Semantic definitions -->
+    <dimen name="add_account_font_size">20sp</dimen>
+
+    <dimen name="horizontal_page_margin">@dimen/margin_medium</dimen>
+    <dimen name="vertical_page_margin">@dimen/margin_medium</dimen>
+
+    <integer name="screen_size">360</integer>
+    <dimen name="tool_bar_top_padding">24dp</dimen>
+    <dimen name="student_banner_height">146dp</dimen>
+    <dimen name="student_banner_action_bar_margin_top">12dp</dimen>
+    <dimen name="student_banner_action_bar_padding_top">0dp</dimen>
+
+    <dimen name="baby_title_height">300dp</dimen>
+    <dimen name="baby_image_height">240dp</dimen>
+    <dimen name="baby_nav_width">18dp</dimen>
+    <dimen name="baby_nav_margin">22dp</dimen>
+    <!--<dimen name="fab_margin">16dp</dimen>-->
+
+    <dimen name="status_bar_height">24dp</dimen>
+</resources>

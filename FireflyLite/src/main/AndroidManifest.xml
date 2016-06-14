@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tw.com.ischool.fireflylite">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity android:name="tw.com.ischool.fireflylite.login.LoginActivity" />
+        <activity android:name="tw.com.ischool.fireflylite.exception.unhandledexception.ExceptionActivity" />
+        <activity android:name="tw.com.ischool.fireflylite.login.ReAuthActivity"></activity>
+    </application>
+
+</manifest>
