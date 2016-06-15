@@ -1,7 +1,11 @@
 package tw.com.ischool.fireflylite.login;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+
+import tw.com.ischool.fireflylite.Pupa;
+import tw.com.ischool.fireflylite.credential.CallerPref;
 
 /**
  * Created by jianwenlai on 2016/2/2.
@@ -24,5 +28,20 @@ public class LoginHelper {
         intent.putExtra(REDIRECT_URI, redirect);
 
         activity.startActivityForResult(intent, requestCode);
+    }
+
+    public static void signOut(Context context, SignoutHandler signoutHandler ) {
+        //清除 local 個人資訊
+        CallerPref.clear(context);
+        Pupa.getInstance().clearAll();
+
+        //觸發 logout 事件
+        if (signoutHandler != null) {
+            signoutHandler.afterSignOut();
+        }
+    }
+
+    public interface SignoutHandler {
+        void afterSignOut() ;
     }
 }

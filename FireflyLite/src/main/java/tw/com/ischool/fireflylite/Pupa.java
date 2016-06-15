@@ -152,5 +152,6 @@ public class Pupa {
     }
 
     public void clearAll() {
+
     }
 }

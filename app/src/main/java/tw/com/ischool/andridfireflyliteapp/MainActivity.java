@@ -26,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Pupa mPupa;     //處理 組態設定的 Singleton 物件
 
-    private Button btnLogin;
+    private Button btnSignIn;
+    private Button btnSignOut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,14 +40,25 @@ public class MainActivity extends AppCompatActivity {
         Pupa.getInstance().setClientSecret(CLIENT_SECRET);
         Pupa.getInstance().setRedirectUri(REDIRECT_URI);
 
-        /* 按鈕按下後，會啟動 OAuth 的登入動作 */
-        this.btnLogin = (Button)findViewById(R.id.button);
-        this.btnLogin.setOnClickListener(new View.OnClickListener() {
+        /* 登入按鈕按下後，會啟動 OAuth 的登入動作 */
+        this.btnSignIn = (Button)findViewById(R.id.btnSignIn);
+        this.btnSignIn.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 //啟動登入動作
                 startLogin();
+            }
+        });
+
+        /* 登出按鈕按下後，會清除 local 使用者資訊。 */
+        this.btnSignOut = (Button)findViewById(R.id.btnSignout);
+        this.btnSignOut.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                //啟動登入動作
+                startLogout();
             }
         });
     }
@@ -62,12 +74,13 @@ public class MainActivity extends AppCompatActivity {
         LoginHelper.startup(this, mPupa.getClientID() , mPupa.getClientSecret(), SCOPE, mPupa.getRedirectUri(), REQUEST_CODE);
     }
 
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         //登入成功，不管是初次登入，或是再次開啟。
         if (REQUEST_CODE == requestCode && resultCode == LoginHelper.RESULT_LOGIN_OK) {
 
-            AccountInfo accountInfo = getCurrentUser(MainActivity.this);
+            AccountInfo accountInfo = mPupa.getCurrentUser(MainActivity.this);
 
             Log.d("DEBUG", accountInfo.getFirstName());
             Log.d("DEBUG", accountInfo.getLoginName());
@@ -76,18 +89,28 @@ public class MainActivity extends AppCompatActivity {
             TextView txt = (TextView)findViewById(R.id.textView);
             txt.setText("Hello," + accountInfo.getUserName());
 
+            btnSignIn.setEnabled(false);
+            btnSignOut.setEnabled(true);
+
         } else if (REQUEST_CODE == requestCode && resultCode == RESULT_CANCELED) {
             finish();   //使用者在未登入動作時，就按取消。
         }
     }
 
-    /* 解析取得目前登入的使用者資訊 */
-    private AccountInfo getCurrentUser(Context context) {
-        AccountToken token =   CallerPref.get(context);
-        AccountInfo result = null;
-        if (token != null) {
-            result =  new AccountInfo(token.getMyInfoString());
-        }
-        return result ;
+
+    /**
+     * 呼叫 LoginHelper.signOut 方法執行登出動作，並指定登出後要執行的事項。
+     */
+    private void startLogout() {
+        LoginHelper.signOut(MainActivity.this, new LoginHelper.SignoutHandler() {
+            @Override
+            public void afterSignOut() {
+                TextView txt = (TextView)findViewById(R.id.textView);
+                txt.setText("您已經登出系統~");
+
+                btnSignIn.setEnabled(true);
+                btnSignOut.setEnabled(false);
+            }
+        });
     }
 }
