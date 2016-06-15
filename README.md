@@ -8,8 +8,9 @@ compile 'tw.com.ischool:FireflyLite:0.2.0'
 ## Usage :
         public class MainActivity extends AppCompatActivity {
         
-            public static final String CLIENT_ID = "9403ec217a19a849d498a5c18909bf38";
-            public static final String CLIENT_SECRET = "40654f9b8d2ddbf54d8f3059c2d70cd80d4e7e0fa3094d5b19305f945a38f025";
+            //Client ID 和 Client Secret 可在 https://auth.ischool.com.tw/1campus/manage 申請。
+            public static final String CLIENT_ID = "9403ec217a19a849xxxxxxxxx";  
+            public static final String CLIENT_SECRET = "40654f9b8xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
             public static final String REDIRECT_URI = "http://_blank";
             public static final String SCOPE = "User.Mail,User.BasicInfo";
         
