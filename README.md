@@ -3,7 +3,7 @@ An Android library you can use to sign in ischool account center.
 
 ## Installation :
 ### Gradle :
-compile 'tw.com.ischool:FireflyLite:0.1.0'
+compile 'tw.com.ischool:FireflyLite:0.2.0'
 
 ## Usage :
         public class MainActivity extends AppCompatActivity {
